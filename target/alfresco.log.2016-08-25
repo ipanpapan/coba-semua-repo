@@ -1,0 +1,471 @@
+16:25:18,813 INFO  [org.alfresco.repo.admin] Using database URL 'jdbc:h2:C:\Users\Gatling\workspace\coba-semua-repo/alf_data_dev/h2_data/alf_dev;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=10000;MVCC=FALSE;LOCK_MODE=0' with user 'alfresco'.
+16:25:19,621 INFO  [org.alfresco.repo.admin] Connected to database H2 version 1.4.190 (2015-10-11)
+16:25:34,615 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Ignoring script patch (post-Hibernate): patch.db-V4.2-metadata-query-indexes
+16:25:34,615 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Ignoring script patch (post-Hibernate): patch.db-V5.1-metadata-query-indexes
+16:26:06,618 WARN  [org.springframework.web.context.support.XmlWebApplicationContext] Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.coba.coba_semua_repo.demoamp.Demo] for bean with name 'coba-semua-repo.exampleBean' defined in class path resource [alfresco/module/coba-semua-repo/context/service-context.xml]; nested exception is java.lang.ClassNotFoundException: com.coba.coba_semua_repo.demoamp.Demo
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1278)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1347)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:913)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:617)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:934)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:410)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.alfresco.web.app.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:63)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: com.coba.coba_semua_repo.demoamp.Demo
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1702)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1547)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:265)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:419)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1270)
+	... 19 more
+16:26:07,735 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'solrSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+16:26:07,737 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'activitiesSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+16:26:08,934 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'locksSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+16:26:08,946 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'propertyValueSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+16:26:08,948 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'auditSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+16:26:08,950 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'contentSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+16:26:08,953 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'repoSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+16:26:08,959 ERROR [org.springframework.web.context.ContextLoader] Context initialization failed
+org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.coba.coba_semua_repo.demoamp.Demo] for bean with name 'coba-semua-repo.exampleBean' defined in class path resource [alfresco/module/coba-semua-repo/context/service-context.xml]; nested exception is java.lang.ClassNotFoundException: com.coba.coba_semua_repo.demoamp.Demo
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1278)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1347)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:913)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:617)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:934)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:410)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.alfresco.web.app.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:63)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: com.coba.coba_semua_repo.demoamp.Demo
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1702)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1547)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:265)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:419)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1270)
+	... 19 more
+16:26:20,066 WARN  [org.apache.myfaces.shared_impl.util.LocaleUtils] Locale name in faces-config.xml null or empty, setting locale to default locale : en_US
+16:31:41,082 INFO  [org.alfresco.repo.admin] Using database URL 'jdbc:h2:C:\Users\Gatling\workspace\coba-semua-repo/alf_data_dev/h2_data/alf_dev;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=10000;MVCC=FALSE;LOCK_MODE=0' with user 'alfresco'.
+16:31:41,485 INFO  [org.alfresco.repo.admin] Connected to database H2 version 1.4.190 (2015-10-11)
+16:31:53,073 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Ignoring script patch (post-Hibernate): patch.db-V4.2-metadata-query-indexes
+16:31:53,073 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Ignoring script patch (post-Hibernate): patch.db-V5.1-metadata-query-indexes
+16:32:09,147 WARN  [org.springframework.web.context.support.XmlWebApplicationContext] Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'coba-semua-repo_dictionaryBootstrap' defined in class path resource [alfresco/module/coba-semua-repo/context/service-context.xml]: Invocation of init method failed; nested exception is org.alfresco.service.cmr.dictionary.DictionaryException: 07250001 Could not import bootstrap model 'alfresco/module/coba-semua-repo/model/cbModel.xml'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:636)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:934)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:410)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.alfresco.web.app.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:63)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.alfresco.service.cmr.dictionary.DictionaryException: 07250001 Could not import bootstrap model 'alfresco/module/coba-semua-repo/model/cbModel.xml'
+	at org.alfresco.repo.dictionary.DictionaryBootstrap.onDictionaryInit(DictionaryBootstrap.java:173)
+	at org.alfresco.repo.dictionary.DictionaryBootstrap.bootstrap(DictionaryBootstrap.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1640)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1581)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1511)
+	... 22 more
+Caused by: org.alfresco.service.cmr.dictionary.DictionaryException: 07250000 Failed to compile model 'cb:emailmodel'
+	at org.alfresco.repo.dictionary.CompiledModel.<init>(CompiledModel.java:116)
+	at org.alfresco.repo.dictionary.M2Model.compile(M2Model.java:167)
+	at org.alfresco.repo.dictionary.DictionaryDAOImpl.putModelImpl(DictionaryDAOImpl.java:273)
+	at org.alfresco.repo.dictionary.DictionaryDAOImpl.putModel(DictionaryDAOImpl.java:260)
+	at org.alfresco.repo.dictionary.DictionaryBootstrap.onDictionaryInit(DictionaryBootstrap.java:169)
+	... 30 more
+Caused by: org.alfresco.service.namespace.NamespaceException: Namespace prefix sc is not mapped to a namespace URI
+	at org.alfresco.service.namespace.QName.createQName(QName.java:102)
+	at org.alfresco.service.namespace.QName.createQName(QName.java:124)
+	at org.alfresco.repo.dictionary.M2ConstraintDefinition.<init>(M2ConstraintDefinition.java:105)
+	at org.alfresco.repo.dictionary.CompiledModel.constructDefinitions(CompiledModel.java:181)
+	at org.alfresco.repo.dictionary.CompiledModel.<init>(CompiledModel.java:96)
+	... 34 more
+16:32:09,393 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'solrSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+16:32:09,396 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'activitiesSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+16:32:10,000 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'locksSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+16:32:10,002 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'propertyValueSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+16:32:10,002 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'auditSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+16:32:10,003 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'contentSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+16:32:10,005 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'repoSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+16:32:10,006 ERROR [org.springframework.web.context.ContextLoader] Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'coba-semua-repo_dictionaryBootstrap' defined in class path resource [alfresco/module/coba-semua-repo/context/service-context.xml]: Invocation of init method failed; nested exception is org.alfresco.service.cmr.dictionary.DictionaryException: 07250001 Could not import bootstrap model 'alfresco/module/coba-semua-repo/model/cbModel.xml'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:636)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:934)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:410)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.alfresco.web.app.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:63)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.alfresco.service.cmr.dictionary.DictionaryException: 07250001 Could not import bootstrap model 'alfresco/module/coba-semua-repo/model/cbModel.xml'
+	at org.alfresco.repo.dictionary.DictionaryBootstrap.onDictionaryInit(DictionaryBootstrap.java:173)
+	at org.alfresco.repo.dictionary.DictionaryBootstrap.bootstrap(DictionaryBootstrap.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1640)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1581)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1511)
+	... 22 more
+Caused by: org.alfresco.service.cmr.dictionary.DictionaryException: 07250000 Failed to compile model 'cb:emailmodel'
+	at org.alfresco.repo.dictionary.CompiledModel.<init>(CompiledModel.java:116)
+	at org.alfresco.repo.dictionary.M2Model.compile(M2Model.java:167)
+	at org.alfresco.repo.dictionary.DictionaryDAOImpl.putModelImpl(DictionaryDAOImpl.java:273)
+	at org.alfresco.repo.dictionary.DictionaryDAOImpl.putModel(DictionaryDAOImpl.java:260)
+	at org.alfresco.repo.dictionary.DictionaryBootstrap.onDictionaryInit(DictionaryBootstrap.java:169)
+	... 30 more
+Caused by: org.alfresco.service.namespace.NamespaceException: Namespace prefix sc is not mapped to a namespace URI
+	at org.alfresco.service.namespace.QName.createQName(QName.java:102)
+	at org.alfresco.service.namespace.QName.createQName(QName.java:124)
+	at org.alfresco.repo.dictionary.M2ConstraintDefinition.<init>(M2ConstraintDefinition.java:105)
+	at org.alfresco.repo.dictionary.CompiledModel.constructDefinitions(CompiledModel.java:181)
+	at org.alfresco.repo.dictionary.CompiledModel.<init>(CompiledModel.java:96)
+	... 34 more
+16:32:14,854 WARN  [org.apache.myfaces.shared_impl.util.LocaleUtils] Locale name in faces-config.xml null or empty, setting locale to default locale : en_US
+16:37:43,026 INFO  [org.alfresco.repo.admin] Using database URL 'jdbc:h2:C:\Users\Gatling\workspace\coba-semua-repo/alf_data_dev/h2_data/alf_dev;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=10000;MVCC=FALSE;LOCK_MODE=0' with user 'alfresco'.
+16:37:47,444 INFO  [org.alfresco.repo.admin] Connected to database H2 version 1.4.190 (2015-10-11)
+16:37:58,827 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Ignoring script patch (post-Hibernate): patch.db-V4.2-metadata-query-indexes
+16:37:58,827 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Ignoring script patch (post-Hibernate): patch.db-V5.1-metadata-query-indexes
+16:38:14,529 WARN  [org.springframework.web.context.support.XmlWebApplicationContext] Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'coba-semua-repo_dictionaryBootstrap' defined in class path resource [alfresco/module/coba-semua-repo/context/service-context.xml]: Invocation of init method failed; nested exception is org.alfresco.service.cmr.dictionary.DictionaryException: 07250001 Could not import bootstrap model 'alfresco/module/coba-semua-repo/model/cbModel.xml'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:636)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:934)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:410)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.alfresco.web.app.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:63)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.alfresco.service.cmr.dictionary.DictionaryException: 07250001 Could not import bootstrap model 'alfresco/module/coba-semua-repo/model/cbModel.xml'
+	at org.alfresco.repo.dictionary.DictionaryBootstrap.onDictionaryInit(DictionaryBootstrap.java:173)
+	at org.alfresco.repo.dictionary.DictionaryBootstrap.bootstrap(DictionaryBootstrap.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1640)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1581)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1511)
+	... 22 more
+Caused by: org.alfresco.service.cmr.dictionary.DictionaryException: 07250000 Failed to compile model 'cb:emailmodel'
+	at org.alfresco.repo.dictionary.CompiledModel.<init>(CompiledModel.java:116)
+	at org.alfresco.repo.dictionary.M2Model.compile(M2Model.java:167)
+	at org.alfresco.repo.dictionary.DictionaryDAOImpl.putModelImpl(DictionaryDAOImpl.java:273)
+	at org.alfresco.repo.dictionary.DictionaryDAOImpl.putModel(DictionaryDAOImpl.java:260)
+	at org.alfresco.repo.dictionary.DictionaryBootstrap.onDictionaryInit(DictionaryBootstrap.java:169)
+	... 30 more
+Caused by: org.alfresco.service.namespace.NamespaceException: Namespace prefix sc is not mapped to a namespace URI
+	at org.alfresco.service.namespace.QName.createQName(QName.java:102)
+	at org.alfresco.service.namespace.QName.createQName(QName.java:124)
+	at org.alfresco.repo.dictionary.M2ConstraintDefinition.<init>(M2ConstraintDefinition.java:105)
+	at org.alfresco.repo.dictionary.CompiledModel.constructDefinitions(CompiledModel.java:181)
+	at org.alfresco.repo.dictionary.CompiledModel.<init>(CompiledModel.java:96)
+	... 34 more
+16:38:14,773 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'solrSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+16:38:14,776 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'activitiesSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+16:38:15,374 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'locksSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+16:38:15,376 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'propertyValueSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+16:38:15,376 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'auditSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+16:38:15,378 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'contentSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+16:38:15,379 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] Invocation of destroy method 'close' failed on bean with name 'repoSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+16:38:15,380 ERROR [org.springframework.web.context.ContextLoader] Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'coba-semua-repo_dictionaryBootstrap' defined in class path resource [alfresco/module/coba-semua-repo/context/service-context.xml]: Invocation of init method failed; nested exception is org.alfresco.service.cmr.dictionary.DictionaryException: 07250001 Could not import bootstrap model 'alfresco/module/coba-semua-repo/model/cbModel.xml'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:636)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:934)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:410)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.alfresco.web.app.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:63)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.alfresco.service.cmr.dictionary.DictionaryException: 07250001 Could not import bootstrap model 'alfresco/module/coba-semua-repo/model/cbModel.xml'
+	at org.alfresco.repo.dictionary.DictionaryBootstrap.onDictionaryInit(DictionaryBootstrap.java:173)
+	at org.alfresco.repo.dictionary.DictionaryBootstrap.bootstrap(DictionaryBootstrap.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1640)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1581)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1511)
+	... 22 more
+Caused by: org.alfresco.service.cmr.dictionary.DictionaryException: 07250000 Failed to compile model 'cb:emailmodel'
+	at org.alfresco.repo.dictionary.CompiledModel.<init>(CompiledModel.java:116)
+	at org.alfresco.repo.dictionary.M2Model.compile(M2Model.java:167)
+	at org.alfresco.repo.dictionary.DictionaryDAOImpl.putModelImpl(DictionaryDAOImpl.java:273)
+	at org.alfresco.repo.dictionary.DictionaryDAOImpl.putModel(DictionaryDAOImpl.java:260)
+	at org.alfresco.repo.dictionary.DictionaryBootstrap.onDictionaryInit(DictionaryBootstrap.java:169)
+	... 30 more
+Caused by: org.alfresco.service.namespace.NamespaceException: Namespace prefix sc is not mapped to a namespace URI
+	at org.alfresco.service.namespace.QName.createQName(QName.java:102)
+	at org.alfresco.service.namespace.QName.createQName(QName.java:124)
+	at org.alfresco.repo.dictionary.M2ConstraintDefinition.<init>(M2ConstraintDefinition.java:105)
+	at org.alfresco.repo.dictionary.CompiledModel.constructDefinitions(CompiledModel.java:181)
+	at org.alfresco.repo.dictionary.CompiledModel.<init>(CompiledModel.java:96)
+	... 34 more
+16:38:20,944 WARN  [org.apache.myfaces.shared_impl.util.LocaleUtils] Locale name in faces-config.xml null or empty, setting locale to default locale : en_US
+16:43:18,562 INFO  [org.alfresco.repo.admin] Using database URL 'jdbc:h2:C:\Users\Gatling\workspace\coba-semua-repo/alf_data_dev/h2_data/alf_dev;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=10000;MVCC=FALSE;LOCK_MODE=0' with user 'alfresco'.
+16:43:22,996 INFO  [org.alfresco.repo.admin] Connected to database H2 version 1.4.190 (2015-10-11)
+16:43:33,882 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Ignoring script patch (post-Hibernate): patch.db-V4.2-metadata-query-indexes
+16:43:33,882 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Ignoring script patch (post-Hibernate): patch.db-V5.1-metadata-query-indexes
+16:43:50,327 INFO  [org.springframework.extensions.webscripts.TemplateProcessorRegistry] Registered template processor Repository Template Processor for extension ftl
+16:43:50,333 INFO  [org.springframework.extensions.webscripts.ScriptProcessorRegistry] Registered script processor Repository Script Processor for extension js
+16:43:54,554 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Starting 'ContentStore' subsystem, ID: [ContentStore, managed, unencrypted]
+16:43:54,629 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Startup of 'ContentStore' subsystem, ID: [ContentStore, managed, unencrypted] complete
+16:43:54,664 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Connecting to database: jdbc:h2:C:\Users\Gatling\workspace\coba-semua-repo/alf_data_dev/h2_data/alf_dev, UserName=ALFRESCO, H2 JDBC Driver
+16:43:54,665 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Schema managed by database dialect org.hibernate.dialect.H2Dialect.
+16:43:54,816 WARN  [org.alfresco.repo.domain.schema.SchemaBootstrap] Schema validation found 85 potential problems, results written to: C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\Alfresco-H2Dialect-Validation-Pre-Upgrade-alf_-5998598863535223609.txt
+16:43:54,832 WARN  [org.alfresco.repo.domain.schema.SchemaBootstrap] Schema validation found 26 potential problems, results written to: C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\Alfresco-H2Dialect-Validation-Pre-Upgrade-act_-8388394631692199234.txt
+16:43:54,960 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Normalized schema dumped to file C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\Alfresco-schema-H2Dialect-pre-upgrade-alf_-5646554022286360065.xml.
+16:43:54,960 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Normalized schema dumped to file C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\Alfresco-schema-H2Dialect-pre-upgrade-jbpm_-4346565242688309137.xml.
+16:43:54,960 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Normalized schema dumped to file C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\Alfresco-schema-H2Dialect-pre-upgrade-act_-2578101692412418627.xml.
+16:43:54,964 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Executing database script C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\AlfrescoSchema-H2Dialect-Update-7028062316923049611.sql (Copied from classpath:alfresco/dbscripts/create/org.hibernate.dialect.H2Dialect/AlfrescoCreate-RepoTables.sql).
+16:43:55,139 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Executing database script C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\AlfrescoSchema-H2Dialect-Update-7231182934453283258.sql (Copied from classpath:alfresco/dbscripts/create/org.hibernate.dialect.H2Dialect/AlfrescoCreate-LockTables.sql).
+16:43:55,152 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Executing database script C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\AlfrescoSchema-H2Dialect-Update-1858114638846022349.sql (Copied from classpath:alfresco/dbscripts/create/org.hibernate.dialect.H2Dialect/AlfrescoCreate-ContentTables.sql).
+16:43:55,175 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Executing database script C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\AlfrescoSchema-H2Dialect-Update-1620612967579493495.sql (Copied from classpath:alfresco/dbscripts/create/org.hibernate.dialect.H2Dialect/AlfrescoCreate-PropertyValueTables.sql).
+16:43:55,208 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Executing database script C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\AlfrescoSchema-H2Dialect-Update-2840012050889466068.sql (Copied from classpath:alfresco/dbscripts/create/org.hibernate.dialect.H2Dialect/AlfrescoCreate-ContentUrlEncryptionTables.sql).
+16:43:55,218 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Executing database script C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\AlfrescoSchema-H2Dialect-Update-8903319154456681301.sql (Copied from classpath:alfresco/dbscripts/create/org.hibernate.dialect.H2Dialect/AlfrescoCreate-AuditTables.sql).
+16:43:55,239 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Executing database script C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\AlfrescoSchema-H2Dialect-Update-2052236793831167783.sql (Copied from classpath:alfresco/dbscripts/create/org.hibernate.dialect.H2Dialect/AlfrescoCreate-ActivityTables.sql).
+16:43:55,251 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Executing database script C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\AlfrescoSchema-H2Dialect-Update-9172050200660435399.sql (Copied from classpath:alfresco/dbscripts/create/org.hibernate.dialect.H2Dialect/AlfrescoCreate-UsageTables.sql).
+16:43:55,261 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Executing database script C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\AlfrescoSchema-H2Dialect-Update-3237980024565510036.sql (Copied from classpath:alfresco/dbscripts/create/org.hibernate.dialect.H2Dialect/AlfrescoCreate-SubscriptionTables.sql).
+16:43:55,270 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Executing database script C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\AlfrescoSchema-H2Dialect-Update-3238532889573857362.sql (Copied from classpath:alfresco/dbscripts/create/org.hibernate.dialect.H2Dialect/AlfrescoCreate-TenantTables.sql).
+16:43:55,276 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Executing database script C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\AlfrescoSchema-H2Dialect-Update-3686332915587101488.sql (Copied from classpath:alfresco/dbscripts/create/org.hibernate.dialect.H2Dialect/AlfrescoCreate-AuthorizationTables.sql).
+16:43:55,339 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Executing database script C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\AlfrescoSchema-H2Dialect-Update-4074861492908120834.sql (Generated).
+16:43:55,529 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Executing database script C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\AlfrescoSchema-H2Dialect-Update-5832080659756386083.sql (Copied from classpath:alfresco/dbscripts/create/org.hibernate.dialect.H2Dialect/AlfrescoPostCreate-JBPM-Extra.sql).
+16:43:55,533 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Executing database script C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\AlfrescoSchema-H2Dialect-Update-1816851730071412615.sql (Copied from classpath:alfresco/dbscripts/create/org.hibernate.dialect.H2Dialect/AlfrescoPostCreate-JBPM-FK-indexes.sql).
+16:43:55,582 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Executing database script C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\AlfrescoSchema-H2Dialect-Update-4500508015023492049.sql (Copied from classpath:alfresco/dbscripts/create/org.hibernate.dialect.H2Dialect/AlfrescoPostCreate-JBPM-varinst-indexes.sql).
+16:43:55,592 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Create scripts executed in 874 ms
+16:43:56,293 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] All executed statements:  C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\AlfrescoSchema-H2Dialect-All_Statements-8198013136569495604.sql.
+16:43:56,904 WARN  [org.alfresco.repo.domain.schema.SchemaBootstrap] Schema validation found 754 potential problems, results written to: C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\Alfresco-H2Dialect-Validation-Post-Upgrade-alf_-2929825900609377068.txt
+16:43:57,143 WARN  [org.alfresco.repo.domain.schema.SchemaBootstrap] Schema validation found 275 potential problems, results written to: C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\Alfresco-H2Dialect-Validation-Post-Upgrade-act_-1560531853295414198.txt
+16:43:57,834 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Normalized schema dumped to file C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\Alfresco-schema-H2Dialect-post-upgrade-alf_-306964768198105578.xml.
+16:43:57,835 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Normalized schema dumped to file C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\Alfresco-schema-H2Dialect-post-upgrade-jbpm_-6320496787694011788.xml.
+16:43:57,835 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] Normalized schema dumped to file C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\Alfresco-schema-H2Dialect-post-upgrade-act_-7023002799988163701.xml.
+16:43:58,147 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Starting 'Search' subsystem, ID: [Search, hidden]
+16:43:58,825 ERROR [org.alfresco.repo.search.impl.lucene.fts.FullTextSearchIndexerBootstrapBean] The lucene search subsystem is not supported. Please see http://docs.alfresco.com/null.null/tasks/lucene-solr4-migration.html
+16:43:58,828 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Startup of 'Search' subsystem, ID: [Search, hidden] complete
+16:44:00,312 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Starting 'Transformers' subsystem, ID: [Transformers, default]
+16:44:00,564 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Startup of 'Transformers' subsystem, ID: [Transformers, default] complete
+16:44:00,567 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Starting 'thirdparty' subsystem, ID: [thirdparty, default]
+16:44:00,673 ERROR [org.alfresco.repo.content.transform.magick.AbstractImageMagickContentTransformerWorker] ImageMagickContentTransformerWorker not available: 07250000 Failed to perform ImageMagick transformation: 
+Execution result: 
+   os:         Windows 7
+   command:    ./ImageMagick/bin/convert C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\ImageMagickContentTransformerWorker_init_source_2810661276923057752.gif C:\Users\Gatling\workspace\coba-semua-repo\target\Alfresco\ImageMagickContentTransformerWorker_init_target_5588769333125237926.png
+   succeeded:  false
+   exit code:  1
+   out:        
+   err:        Cannot run program "./ImageMagick/bin/convert": CreateProcess error=2, The system cannot find the file specified
+16:44:00,674 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Startup of 'thirdparty' subsystem, ID: [thirdparty, default] complete
+16:44:00,680 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Starting 'OOoDirect' subsystem, ID: [OOoDirect, default]
+16:44:01,071 ERROR [org.alfresco.util.exec.RuntimeExecBootstrapBean] Bootstrap command failed: 
+Execution result: 
+   os:         Windows 7
+   command:    soffice -accept=socket,host=127.0.0.1,port=8100;urp;StarOffice.ServiceManager -env:UserInstallation=file:///C:/Users/Gatling/workspace/coba-semua-repo/alf_data_dev/oouser -headless -nocrashreport -nofirststartwizard -nologo -norestore
+   succeeded:  false
+   exit code:  2
+   out:        
+   err:        Cannot run program "soffice": CreateProcess error=2, The system cannot find the file specified
+16:44:03,157 WARN  [org.alfresco.util.OpenOfficeConnectionTester] An initial OpenOffice connection could not be established.
+16:44:03,159 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Startup of 'OOoDirect' subsystem, ID: [OOoDirect, default] complete
+16:44:15,980 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Starting 'Authentication' subsystem, ID: [Authentication, managed, alfrescoNtlm1]
+16:44:16,326 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Startup of 'Authentication' subsystem, ID: [Authentication, managed, alfrescoNtlm1] complete
+16:44:18,370 WARN  [org.activiti.engine.impl.bpmn.parser.BpmnParse] Following warnings encountered during process validation: [Validation set: 'activiti-executable-process' | Problem: 'activiti-exclusive-gateway-seq-flow-without-conditions'] : Exclusive gateway has at least one outgoing sequence flow without a condition (which isn't the default one) - [Extra info : processDefinitionId = activitiReview | processDefinitionName = Review And Approve Activiti Process |  | id = reviewDecision |  | activityName = Review Decision | ] ( line: 48, column: 9)
+
+16:44:18,573 WARN  [org.activiti.engine.impl.bpmn.parser.BpmnParse] Following warnings encountered during process validation: [Validation set: 'activiti-executable-process' | Problem: 'activiti-exclusive-gateway-seq-flow-without-conditions'] : Exclusive gateway has at least one outgoing sequence flow without a condition (which isn't the default one) - [Extra info : processDefinitionId = activitiReviewPooled | processDefinitionName = Pooled Review And Approve Activiti Process |  | id = reviewDecision |  | activityName = Review Decision | ] ( line: 49, column: 9)
+
+16:44:18,736 WARN  [org.activiti.engine.impl.bpmn.parser.BpmnParse] Following warnings encountered during process validation: [Validation set: 'activiti-executable-process' | Problem: 'activiti-exclusive-gateway-seq-flow-without-conditions'] : Exclusive gateway has at least one outgoing sequence flow without a condition (which isn't the default one) - [Extra info : processDefinitionId = activitiParallelReview | processDefinitionName = Parallel Review And Approve Activiti Process |  | id = reviewDecision |  | activityName = Review Decision | ] ( line: 86, column: 9)
+
+16:44:18,887 WARN  [org.activiti.engine.impl.bpmn.parser.BpmnParse] Following warnings encountered during process validation: [Validation set: 'activiti-executable-process' | Problem: 'activiti-exclusive-gateway-seq-flow-without-conditions'] : Exclusive gateway has at least one outgoing sequence flow without a condition (which isn't the default one) - [Extra info : processDefinitionId = activitiParallelGroupReview | processDefinitionName = Parallel Group Review And Approve Activiti Process |  | id = reviewDecision |  | activityName = Review Decision | ] ( line: 108, column: 9)
+
+16:44:19,020 WARN  [org.activiti.engine.impl.bpmn.parser.BpmnParse] Following warnings encountered during process validation: [Validation set: 'activiti-executable-process' | Problem: 'activiti-exclusive-gateway-seq-flow-without-conditions'] : Exclusive gateway has at least one outgoing sequence flow without a condition (which isn't the default one) - [Extra info : processDefinitionId = activitiInvitationModerated | processDefinitionName = Moderated activiti invitation process |  | id = reviewDecision |  | activityName = Review Decision | ] ( line: 46, column: 7)
+
+16:44:19,057 WARN  [org.activiti.engine.impl.bpmn.parser.BpmnParse] Following warnings encountered during process validation: [Validation set: 'activiti-executable-process' | Problem: 'activiti-exclusive-gateway-seq-flow-without-conditions'] : Exclusive gateway has at least one outgoing sequence flow without a condition (which isn't the default one) - [Extra info : processDefinitionId = activitiInvitationNominated | processDefinitionName = Nominated activiti invitation process |  | id = inviteGateway |  | activityName = Invite Gateway | ] ( line: 48, column: 7)
+
+16:44:19,924 INFO  [org.alfresco.repo.admin.ConfigurationChecker] The Alfresco root data directory ('dir.root') is: C:\Users\Gatling\workspace\coba-semua-repo\alf_data_dev
+16:44:20,092 INFO  [org.alfresco.repo.admin.patch.PatchExecuter] Checking for patches to apply ...
+16:44:20,183 WARN  [org.alfresco.repo.admin.patch.PatchExecuter] Patch description is not available: Patch[ id=patch.contentFormFolderType, description=patch.contentFormFolderType.description, fixesFromSchema=0, fixesToSchema=36, targetSchema=37, ignored=false]
+16:44:20,199 WARN  [org.alfresco.repo.admin.patch.PatchExecuter] Patch description is not available: Patch[ id=patch.redeploySubmitProcess, description=patch.redeploySubmitProcess.description, fixesFromSchema=0, fixesToSchema=57, targetSchema=58, ignored=false]
+16:44:20,504 INFO  [org.alfresco.repo.admin.patch.PatchExecuter] 	Applying patch 'patch.exampleJavaScript' (Loads sample Javascript file into datadictionary scripts folder).
+16:44:21,491 INFO  [org.alfresco.repo.admin.patch.PatchExecuter] 	Applying patch 'patch.siteLoadPatch.swsdp' (Loads a sample site into the repository.).
+16:44:21,616 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Starting 'sysAdmin' subsystem, ID: [sysAdmin, default]
+16:44:21,654 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Startup of 'sysAdmin' subsystem, ID: [sysAdmin, default] complete
+16:44:30,664 INFO  [org.alfresco.repo.admin.patch.PatchExecuter] 
+=== Applied patch                 === 
+ID: patch.db-V3.4-UsageTables
+RESULT: 
+Script completed
+=====================================
+16:44:30,664 INFO  [org.alfresco.repo.admin.patch.PatchExecuter] 
+=== Applied patch                 === 
+ID: patch.db-V4.0-TenantTables
+RESULT: 
+Script completed
+=====================================
+16:44:30,664 INFO  [org.alfresco.repo.admin.patch.PatchExecuter] 
+=== Applied patch                 === 
+ID: patch.db-V3.4-JBPM-varinst-indexes
+RESULT: 
+Script completed
+=====================================
+16:44:30,664 INFO  [org.alfresco.repo.admin.patch.PatchExecuter] 
+=== Applied patch                 === 
+ID: patch.db-V4.1-AuthorizationTables
+RESULT: 
+Script completed
+=====================================
+16:44:30,665 INFO  [org.alfresco.repo.admin.patch.PatchExecuter] 
+=== Applied patch                 === 
+ID: patch.db-V5.0-ContentUrlEncryptionTables
+RESULT: 
+Script completed
+=====================================
+16:44:30,665 INFO  [org.alfresco.repo.admin.patch.PatchExecuter] 
+=== Applied patch                 === 
+ID: patch.exampleJavaScript
+RESULT: 
+Imported view into bootstrap location: /app:company_home/app:dictionary/app:scripts (workspace://SpacesStore/c21b1636-4f49-41f8-a280-ab4b093f9c19)
+=====================================
+16:44:30,665 INFO  [org.alfresco.repo.admin.patch.PatchExecuter] 
+=== Applied patch                 === 
+ID: patch.siteLoadPatch.swsdp
+RESULT: 
+Site swsdp imported.
+=====================================
+16:44:30,711 INFO  [org.alfresco.repo.module.ModuleServiceImpl] Found 2 module package(s).
+16:44:30,728 INFO  [org.alfresco.repo.module.ModuleServiceImpl] Installing module 'coba-semua-repo' version 1.0-SNAPSHOT.
+16:44:30,742 INFO  [org.alfresco.repo.module.ModuleServiceImpl] Installing module 'alfresco-share-services' version 5.1.0.
+16:44:31,131 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Starting 'fileServers' subsystem, ID: [fileServers, default]
+16:44:31,578 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Startup of 'fileServers' subsystem, ID: [fileServers, default] complete
+16:44:31,578 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Starting 'imap' subsystem, ID: [imap, default]
+16:44:31,774 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Startup of 'imap' subsystem, ID: [imap, default] complete
+16:44:31,774 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Starting 'email' subsystem, ID: [email, outbound]
+16:44:31,941 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Startup of 'email' subsystem, ID: [email, outbound] complete
+16:44:31,942 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Starting 'email' subsystem, ID: [email, inbound]
+16:44:32,066 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Startup of 'email' subsystem, ID: [email, inbound] complete
+16:44:32,067 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Starting 'Subscriptions' subsystem, ID: [Subscriptions, default]
+16:44:32,107 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Startup of 'Subscriptions' subsystem, ID: [Subscriptions, default] complete
+16:44:32,118 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Starting 'Synchronization' subsystem, ID: [Synchronization, default]
+16:44:32,220 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Startup of 'Synchronization' subsystem, ID: [Synchronization, default] complete
+16:44:32,234 INFO  [org.alfresco.service.descriptor.DescriptorService] Alfresco JVM - v1.8.0_102-b14; maximum heap size 480,500MB
+16:44:32,234 WARN  [org.alfresco.service.descriptor.DescriptorService] Alfresco JVM - WARNING - maximum heap size 480,500MB is less than recommended 512MB
+16:44:32,235 INFO  [org.alfresco.service.descriptor.DescriptorService] Server Mode :UNKNOWN
+16:44:32,241 INFO  [org.alfresco.service.descriptor.DescriptorService] Alfresco started (Community). Current version: 5.1.0 (r122274-b3) schema 9.016. Originally installed version: 5.1.0 (r122274-b3) schema 9.016.
+16:44:32,251 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Starting 'ActivitiesFeed' subsystem, ID: [ActivitiesFeed, default]
+16:44:32,671 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Startup of 'ActivitiesFeed' subsystem, ID: [ActivitiesFeed, default] complete
+16:44:32,671 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Starting 'Replication' subsystem, ID: [Replication, default]
+16:44:32,701 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] Startup of 'Replication' subsystem, ID: [Replication, default] complete
+16:44:35,411 WARN  [org.activiti.engine.impl.bpmn.parser.BpmnParse] Following warnings encountered during process validation: [Validation set: 'activiti-executable-process' | Problem: 'activiti-exclusive-gateway-seq-flow-without-conditions'] : Exclusive gateway has at least one outgoing sequence flow without a condition (which isn't the default one) - [Extra info : processDefinitionId = publishWebContent | processDefinitionName = Publish Web Content Activiti Process |  | id = checkForScheduledTime |  | activityName = Check Schedule | ] ( line: 46, column: 9)
+
+16:44:43,680 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 397 Web Scripts (+0 failed), 547 URLs
+16:44:43,681 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 1 Package Description Documents (+0 failed) 
+16:44:43,682 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 0 Schema Description Documents (+0 failed) 
+16:44:47,053 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 397 Web Scripts (+0 failed), 547 URLs
+16:44:47,053 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 1 Package Description Documents (+0 failed) 
+16:44:47,053 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 0 Schema Description Documents (+0 failed) 
+16:44:47,058 INFO  [org.springframework.extensions.webscripts.AbstractRuntimeContainer] Initialised Repository Web Script Container (in 10217.316ms)
+16:44:47,081 INFO  [org.springframework.extensions.webscripts.TemplateProcessorRegistry] Registered template processor freemarker for extension ftl
+16:44:47,084 INFO  [org.springframework.extensions.webscripts.ScriptProcessorRegistry] Registered script processor javascript for extension js
+16:44:50,664 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 397 Web Scripts (+0 failed), 547 URLs
+16:44:50,664 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 1 Package Description Documents (+0 failed) 
+16:44:50,664 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 0 Schema Description Documents (+0 failed) 
+16:44:50,799 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 11 Web Scripts (+0 failed), 82 URLs
+16:44:50,799 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 0 Package Description Documents (+0 failed) 
+16:44:50,799 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 0 Schema Description Documents (+0 failed) 
+16:44:50,922 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 11 Web Scripts (+0 failed), 82 URLs
+16:44:50,922 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 0 Package Description Documents (+0 failed) 
+16:44:50,922 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 0 Schema Description Documents (+0 failed) 
+16:44:50,928 INFO  [org.springframework.extensions.webscripts.AbstractRuntimeContainer] Initialised Public Api Web Script Container (in 3607.4636ms)
+16:44:51,036 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 11 Web Scripts (+0 failed), 82 URLs
+16:44:51,036 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 0 Package Description Documents (+0 failed) 
+16:44:51,036 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 0 Schema Description Documents (+0 failed) 
+16:44:55,807 WARN  [org.apache.myfaces.shared_impl.util.LocaleUtils] Locale name in faces-config.xml null or empty, setting locale to default locale : en_US

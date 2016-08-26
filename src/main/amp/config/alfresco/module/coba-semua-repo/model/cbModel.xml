@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Definition of new Model -->
+<model name="cb:emailmodel" xmlns="http://www.alfresco.org/model/dictionary/1.0">
+    <!-- Optional meta-data about the model -->
+    <description>Coba Model</description>
+
+    <!-- Imports are required to allow references to definitions in other models -->
+    <imports>
+        <!-- Import Alfresco Dictionary Definitions -->
+        <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d" />
+        <!-- Import Alfresco Content Domain Model Definitions -->
+        <import uri="http://www.alfresco.org/model/content/1.0" prefix="cm" />
+        <import uri="http://www.alfresco.org/model/system/1.0" prefix="sys" />
+    </imports>
+
+    <!-- Introduction of new namespaces defined by this model -->
+    <namespaces>
+        <namespace uri="http://www.coba.com/model/email/1.0" prefix="cb" />
+    </namespaces>
+
+    <types>
+        <!-- Enterprise-wide generic document type -->
+        <type name="cb:email">
+            <title>Coba Email</title>
+            <parent>cm:content</parent>
+            <properties>
+		        <property name="cb:status">
+		        	<title>Status</title>
+		            <type>d:text</type>
+		            <default>Reject</default>
+		            <constraints>
+		                <constraint type="LIST">
+		                    <parameter name="allowedValues">
+		                        <list>
+		                            <value>Approve</value>
+		                            <value>Reject</value>
+		                        </list>
+		                    </parameter>
+		                </constraint>
+		            </constraints>
+		        </property>
+		    </properties>
+            <associations>
+                <association name="cb:attachment">
+                    <title>Attachments</title>
+                    <source>
+                        <mandatory>false</mandatory>
+                        <many>true</many>
+                    </source>
+                    <target>
+                        <class>cm:content</class>
+                        <mandatory>false</mandatory>
+                        <many>true</many>
+                    </target>
+                </association>
+            </associations>
+            <mandatory-aspects>
+                <aspect>cb:emailable</aspect>
+            </mandatory-aspects>
+        </type>
+
+    </types>
+
+    <aspects>
+        <aspect name="cb:emailable">
+            <title>Coba Emailable</title>
+            <properties>
+                <property name="cb:subject">
+                    <type>d:text</type>
+                </property>
+                <property name="cb:receivedDate">
+                    <type>d:date</type>
+                </property>
+                <property name="cb:from">
+                	<type>d:text</type>
+                </property>
+                <property name="cb:to">
+                	<type>d:text</type>
+                </property>
+            </properties>
+        </aspect>
+    </aspects>
+</model>
