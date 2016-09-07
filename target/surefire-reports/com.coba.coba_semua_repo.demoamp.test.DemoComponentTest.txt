@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.coba.coba_semua_repo.demoamp.test.DemoComponentTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 78.588 sec <<< FAILURE! - in com.coba.coba_semua_repo.demoamp.test.DemoComponentTest
+testChildNodesCount(com.coba.coba_semua_repo.demoamp.test.DemoComponentTest)  Time elapsed: 77.246 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<7> but was:<10>
+	at com.coba.coba_semua_repo.demoamp.test.DemoComponentTest.testChildNodesCount(DemoComponentTest.java:80)
+

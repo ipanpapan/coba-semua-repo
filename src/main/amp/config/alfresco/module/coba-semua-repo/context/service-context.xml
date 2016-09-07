@@ -43,5 +43,36 @@
 	        </list>
 	    </property>
 	</bean>
+	
+	<bean id="${project.artifactId}.workflowBootstrap" parent="workflowDeployer">
+	    <property name="workflowDefinitions">
+	        <list>
+	            <props>
+				    <prop key="engineId">activiti</prop>
+				    <prop key="location">alfresco/module/${project.artifactId}/workflows/reviewEmail.bpmn</prop>
+				    <prop key="mimetype">text/xml</prop>
+				    <prop key="redeploy">false</prop>
+				</props>
+				<props>
+				    <prop key="engineId">activiti</prop>
+				    <prop key="location">alfresco/module/${project.artifactId}/workflows/arrangeWawancara.bpmn</prop>
+				    <prop key="mimetype">text/xml</prop>
+				    <prop key="redeploy">true</prop>
+				</props>
+	        </list>
+	    </property>
+	    <property name="models">
+	        <list>
+	            <value>alfresco/module/${project.artifactId}/model/cbWorkflowModel.xml</value>
+	            <value>alfresco/module/${project.artifactId}/model/awArrangeWorkflowModel.xml</value>
+	        </list>
+	    </property>
+	    <property name="labels">
+	        <list>
+	            <value>alfresco.module.${project.artifactId}.messages.cbWorkflow</value>
+	            <value>alfresco.module.${project.artifactId}.messages.awWorkflow</value>
+	        </list>
+	    </property>
+	</bean>
 
 </beans>

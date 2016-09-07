@@ -43,5 +43,36 @@
 	        </list>
 	    </property>
 	</bean>
+	
+	<bean id="coba-semua-repo.workflowBootstrap" parent="workflowDeployer">
+	    <property name="workflowDefinitions">
+	        <list>
+	            <props>
+				    <prop key="engineId">activiti</prop>
+				    <prop key="location">alfresco/module/coba-semua-repo/workflows/reviewEmail.bpmn</prop>
+				    <prop key="mimetype">text/xml</prop>
+				    <prop key="redeploy">false</prop>
+				</props>
+				<props>
+				    <prop key="engineId">activiti</prop>
+				    <prop key="location">alfresco/module/coba-semua-repo/workflows/arrangeWawancara.bpmn</prop>
+				    <prop key="mimetype">text/xml</prop>
+				    <prop key="redeploy">true</prop>
+				</props>
+	        </list>
+	    </property>
+	    <property name="models">
+	        <list>
+	            <value>alfresco/module/coba-semua-repo/model/cbWorkflowModel.xml</value>
+	            <value>alfresco/module/coba-semua-repo/model/awArrangeWorkflowModel.xml</value>
+	        </list>
+	    </property>
+	    <property name="labels">
+	        <list>
+	            <value>alfresco.module.coba-semua-repo.messages.cbWorkflow</value>
+	            <value>alfresco.module.coba-semua-repo.messages.awWorkflow</value>
+	        </list>
+	    </property>
+	</bean>
 
 </beans>

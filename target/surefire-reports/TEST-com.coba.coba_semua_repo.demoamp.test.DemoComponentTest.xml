@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.coba.coba_semua_repo.demoamp.test.DemoComponentTest" time="78.588" tests="3" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_102\jre\bin"/>
+    <property name="java.vm.version" value="25.102-b14"/>
+    <property name="user.country.format" value="ID"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Gatling\workspace\coba-semua-repo"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\Gatling\workspace\coba-semua-repo"/>
+    <property name="java.runtime.version" value="1.8.0_102-b14"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_102\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\Gatling\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="classworlds.conf" value="C:\Users\Gatling\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf2734184155354153022.tmp"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_102\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_102/bin/server;C:/Program Files/Java/jre1.8.0_102/bin;C:/Program Files/Java/jre1.8.0_102/lib/amd64;C:\ProgramData\Oracle\Java\javapath;c:\Program Files (x86)\AMD APP\bin\x86_64;c:\Program Files (x86)\AMD APP\bin\x86;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;c:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;c:\Program Files\WIDCOMM\Bluetooth Software\;c:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\Broadcom\WHL\;C:\Program Files\Broadcom\WHL\syswow64;C:\Program Files\Broadcom\WHL\SysWow64\;C:\Program Files\Broadcom\WHL\SysWow64\syswow64;C:\Program Files (x86)\GtkSharp\2.12\bin;c:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\Bitvise SSH Client;C:\Program Files\Java\jdk1.8.0_102\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\dotnet\;C:\Users\Gatling\Downloads\Compressed\apache-maven-3.3.9\bin;C:\Program Files\Git\cmd;C:\Users\Gatling\Desktop;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\Gatling"/>
+    <property name="user.timezone" value="Asia/Bangkok"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="Gatling"/>
+    <property name="java.class.path" value="/C:/Users/Gatling/eclipse/java-neon/eclipse/../../../.p2/pool/plugins/org.eclipse.m2e.maven.runtime_1.7.0.20160603-1931/jars/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_102\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="user.language.format" value="id"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_102"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_102\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_102\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_102\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Users\Gatling\workspace\coba-semua-repo\EMBEDDED"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="testChildNodesCount" classname="com.coba.coba_semua_repo.demoamp.test.DemoComponentTest" time="77.246">
+    <failure message="expected:&lt;7&gt; but was:&lt;10&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<7> but was:<10>
+	at com.coba.coba_semua_repo.demoamp.test.DemoComponentTest.testChildNodesCount(DemoComponentTest.java:80)
+]]></failure>
+    <system-out><![CDATA[2016-08-29 13:35:46,965  WARN  [alfresco.util.RuntimeSystemPropertiesSetter] [main] Could not find alfresco-jmxrmi.password on classpath
+ 2016-08-29 13:35:47,144  INFO  [alfresco.repo.admin] [main] Using database URL 'jdbc:h2:C:\Users\Gatling\workspace\coba-semua-repo/alf_data_dev/h2_data/alf_dev;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=10000;MVCC=FALSE;LOCK_MODE=0' with user 'alfresco'.
+ 2016-08-29 13:35:52,426  INFO  [alfresco.repo.admin] [main] Connected to database H2 version 1.4.190 (2015-10-11)
+ 2016-08-29 13:36:15,279  INFO  [domain.schema.SchemaBootstrap] [main] Ignoring script patch (post-Hibernate): patch.db-V4.2-metadata-query-indexes
+ 2016-08-29 13:36:15,279  INFO  [domain.schema.SchemaBootstrap] [main] Ignoring script patch (post-Hibernate): patch.db-V5.1-metadata-query-indexes
+ SDK Demo AMP class has been loaded
+2016-08-29 13:36:39,952  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Starting 'ContentStore' subsystem, ID: [ContentStore, managed, unencrypted]
+ 2016-08-29 13:36:40,072  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Startup of 'ContentStore' subsystem, ID: [ContentStore, managed, unencrypted] complete
+ Server running at http://localhost:4578
+2016-08-29 13:36:40,092  INFO  [domain.schema.SchemaBootstrap] [main] Connecting to database: jdbc:h2:C:\Users\Gatling\workspace\coba-semua-repo/alf_data_dev/h2_data/alf_dev, UserName=ALFRESCO, H2 JDBC Driver
+ 2016-08-29 13:36:40,092  INFO  [domain.schema.SchemaBootstrap] [main] Schema managed by database dialect org.hibernate.dialect.H2Dialect.
+ 2016-08-29 13:36:41,034  INFO  [domain.schema.SchemaBootstrap] [main] No changes were made to the schema.
+ 2016-08-29 13:36:41,772  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Starting 'Authentication' subsystem, ID: [Authentication, managed, alfrescoNtlm1]
+ 2016-08-29 13:36:42,228  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Startup of 'Authentication' subsystem, ID: [Authentication, managed, alfrescoNtlm1] complete
+ 2016-08-29 13:36:43,701  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Starting 'thirdparty' subsystem, ID: [thirdparty, default]
+ 2016-08-29 13:36:44,035  ERROR [transform.magick.AbstractImageMagickContentTransformerWorker] [main] ImageMagickContentTransformerWorker not available: 07290001 Failed to perform ImageMagick transformation: 
+Execution result: 
+   os:         Windows 7
+   command:    ./ImageMagick/bin/convert C:\Users\Gatling\AppData\Local\Temp\Alfresco\ImageMagickContentTransformerWorker_init_source_3232002463603376614.gif C:\Users\Gatling\AppData\Local\Temp\Alfresco\ImageMagickContentTransformerWorker_init_target_3498043974285194940.png
+   succeeded:  false
+   exit code:  1
+   out:        
+   err:        Cannot run program "./ImageMagick/bin/convert": CreateProcess error=2, The system cannot find the file specified
+ 2016-08-29 13:36:44,037  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Startup of 'thirdparty' subsystem, ID: [thirdparty, default] complete
+ 2016-08-29 13:36:44,037  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Starting 'OOoDirect' subsystem, ID: [OOoDirect, default]
+ 2016-08-29 13:36:44,794  ERROR [util.exec.RuntimeExecBootstrapBean] [main] Bootstrap command failed: 
+Execution result: 
+   os:         Windows 7
+   command:    soffice -accept=socket,host=127.0.0.1,port=8100;urp;StarOffice.ServiceManager -env:UserInstallation=file:///C:/Users/Gatling/workspace/coba-semua-repo/alf_data_dev/oouser -headless -nocrashreport -nofirststartwizard -nologo -norestore
+   succeeded:  false
+   exit code:  2
+   out:        
+   err:        Cannot run program "soffice": CreateProcess error=2, The system cannot find the file specified
+ 2016-08-29 13:36:47,046  WARN  [alfresco.util.OpenOfficeConnectionTester] [main] An initial OpenOffice connection could not be established.
+ 2016-08-29 13:36:47,049  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Startup of 'OOoDirect' subsystem, ID: [OOoDirect, default] complete
+ 2016-08-29 13:36:47,050  INFO  [repo.admin.ConfigurationChecker] [main] The Alfresco root data directory ('dir.root') is: C:\Users\Gatling\workspace\coba-semua-repo\alf_data_dev
+ 2016-08-29 13:36:47,050  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Starting 'Search' subsystem, ID: [Search, hidden]
+ 2016-08-29 13:36:50,459  ERROR [lucene.fts.FullTextSearchIndexerBootstrapBean] [main] The lucene search subsystem is not supported. Please see http://docs.alfresco.com/null.null/tasks/lucene-solr4-migration.html
+ 2016-08-29 13:36:50,512  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Startup of 'Search' subsystem, ID: [Search, hidden] complete
+ 2016-08-29 13:36:50,628  INFO  [admin.patch.PatchExecuter] [main] Checking for patches to apply ...
+ 2016-08-29 13:36:51,075  INFO  [admin.patch.PatchExecuter] [main] No patches were required.
+ 2016-08-29 13:36:51,137  INFO  [repo.module.ModuleServiceImpl] [main] Found 1 module package(s).
+ 2016-08-29 13:36:51,191  INFO  [repo.module.ModuleServiceImpl] [main] Starting module 'coba-semua-repo' version 1.0-SNAPSHOT.
+ 2016-08-29 13:36:51,215  WARN  [repo.module.ModuleServiceImpl] [main] A previously-installed module 'alfresco-share-services' (version 5.1.0) is not present in your distribution.
+ 2016-08-29 13:36:51,218  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Starting 'fileServers' subsystem, ID: [fileServers, default]
+ 2016-08-29 13:36:52,969  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Starting 'sysAdmin' subsystem, ID: [sysAdmin, default]
+ 2016-08-29 13:36:53,079  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Startup of 'sysAdmin' subsystem, ID: [sysAdmin, default] complete
+ 2016-08-29 13:36:53,147  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Startup of 'fileServers' subsystem, ID: [fileServers, default] complete
+ 2016-08-29 13:36:53,147  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Starting 'imap' subsystem, ID: [imap, default]
+ 2016-08-29 13:36:54,131  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Startup of 'imap' subsystem, ID: [imap, default] complete
+ 2016-08-29 13:36:54,131  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Starting 'email' subsystem, ID: [email, outbound]
+ 2016-08-29 13:36:54,654  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Startup of 'email' subsystem, ID: [email, outbound] complete
+ 2016-08-29 13:36:54,654  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Starting 'email' subsystem, ID: [email, inbound]
+ 2016-08-29 13:36:54,802  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Startup of 'email' subsystem, ID: [email, inbound] complete
+ 2016-08-29 13:36:54,802  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Starting 'Subscriptions' subsystem, ID: [Subscriptions, default]
+ 2016-08-29 13:36:54,846  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Startup of 'Subscriptions' subsystem, ID: [Subscriptions, default] complete
+ 2016-08-29 13:36:54,942  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Starting 'Synchronization' subsystem, ID: [Synchronization, default]
+ 2016-08-29 13:36:55,321  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Startup of 'Synchronization' subsystem, ID: [Synchronization, default] complete
+ 2016-08-29 13:36:55,379  INFO  [service.descriptor.DescriptorService] [main] Alfresco JVM - v1.8.0_102-b14; maximum heap size 455.500MB
+ 2016-08-29 13:36:55,381  WARN  [service.descriptor.DescriptorService] [main] Alfresco JVM - WARNING - maximum heap size 455.500MB is less than recommended 512MB
+ 2016-08-29 13:36:55,388  INFO  [service.descriptor.DescriptorService] [main] Server Mode :UNKNOWN
+ 2016-08-29 13:36:55,392  INFO  [service.descriptor.DescriptorService] [main] Alfresco started (Community). Current version: 5.1.0 (r122274-b3) schema 9,016. Originally installed version: 5.1.0 (r122274-b3) schema 9,016.
+ 2016-08-29 13:36:55,441  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Starting 'ActivitiesFeed' subsystem, ID: [ActivitiesFeed, default]
+ 2016-08-29 13:36:55,858  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Startup of 'ActivitiesFeed' subsystem, ID: [ActivitiesFeed, default] complete
+ 2016-08-29 13:36:55,859  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Starting 'Replication' subsystem, ID: [Replication, default]
+ 2016-08-29 13:36:55,882  INFO  [management.subsystems.ChildApplicationContextFactory] [main] Startup of 'Replication' subsystem, ID: [Replication, default] complete
+ 2016-08-29 13:36:59,013  INFO  [extensions.webscripts.DeclarativeRegistry] [main] Registered 13 Web Scripts (+0 failed), 15 URLs
+ 2016-08-29 13:36:59,014  INFO  [extensions.webscripts.DeclarativeRegistry] [main] Registered 1 Package Description Documents (+0 failed) 
+ 2016-08-29 13:36:59,014  INFO  [extensions.webscripts.DeclarativeRegistry] [main] Registered 0 Schema Description Documents (+0 failed) 
+ 2016-08-29 13:36:59,021  INFO  [extensions.webscripts.AbstractRuntimeContainer] [main] Initialised Spring Web Scripts Container Web Script Container (in 371.6942ms)
+ 2016-08-29 13:36:59,187  INFO  [extensions.webscripts.TemplateProcessorRegistry] [main] Registered template processor freemarker for extension ftl
+ 2016-08-29 13:36:59,210  INFO  [extensions.webscripts.ScriptProcessorRegistry] [main] Registered script processor javascript for extension js
+ ]]></system-out>
+  </testcase>
+  <testcase name="testWiring" classname="com.coba.coba_semua_repo.demoamp.test.DemoComponentTest" time="0"/>
+  <testcase name="testGetCompanyHome" classname="com.coba.coba_semua_repo.demoamp.test.DemoComponentTest" time="0.014"/>
+</testsuite>

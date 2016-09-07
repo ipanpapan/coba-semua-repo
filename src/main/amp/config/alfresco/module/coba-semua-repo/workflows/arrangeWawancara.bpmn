@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
+  <process id="arrangeWawancara" name="Arrange Wawancara" isExecutable="true">
+    <startEvent id="startevent1" name="Start" activiti:formKey="awwf:submitRequest"></startEvent>
+    <userTask id="arrange" name="Arrange" activiti:candidateGroups="GROUP_HRD" activiti:formKey="awwf:activitiArrangeWawancara">
+      <extensionElements>
+        <activiti:taskListener event="complete" class="org.alfresco.repo.workflow.activiti.tasklistener.ScriptTaskListener">
+          <activiti:field name="script">
+            <activiti:string>
+            	<![CDATA[
+            		if(task.getVariableLocal('awwf_lanjutTidakLanjutOutcome') == 'Lanjut')
+            		{
+						execution.setVariable('awwf_lanjut', true);
+                    }
+                    var taskId = "activiti$" + task.getId();
+                    var taskComment = workflow.getTask(taskId).getProperties()["bpm:comment"];
+                    logger.log("log pertama: " + taskComment);
+                    execution.setVariable('awwf_catatanArrangeWawancaraOutcome', taskComment);
+				]]>
+			</activiti:string>
+          </activiti:field>
+        </activiti:taskListener>
+      </extensionElements>
+    </userTask>
+    <userTask id="laporWawancara" name="Lapor Wawancara" activiti:assignee="${initiator.properties.userName}" activiti:formKey="awwf:activitiLaporWawancara">
+      <extensionElements>
+        <activiti:taskListener event="create" class="org.alfresco.repo.workflow.activiti.tasklistener.ScriptTaskListener">
+          <activiti:field name="script">
+            <activiti:string>
+            	<![CDATA[
+            		execution.setVariable('awwf_lanjut', false);
+            		logger.log(task.getVariable('awwf_catatanArrangeWawancaraOutcome'));
+            		if (task.getVariable('awwf_catatanArrangeWawancaraOutcome') == '')
+            		{
+            			task.setVariable('awwf_catatanArrangeWawancara', 'hehe');
+            		}
+            		else
+            		{
+            			task.setVariable('awwf_catatanArrangeWawancara', task.getVariable('awwf_catatanArrangeWawancaraOutcome'));
+            		}
+            		logger.log(task.getVariable('awwf_catatanArrangeWawancara'));
+				]]>
+			</activiti:string>
+          </activiti:field>
+        </activiti:taskListener>
+        <activiti:taskListener event="complete" class="org.alfresco.repo.workflow.activiti.tasklistener.ScriptTaskListener">
+          <activiti:field name="script">
+            <activiti:string>
+            	<![CDATA[
+            		if(task.getVariableLocal('awwf_lanjutTidakLanjutOutcome') == 'Lanjut')
+					{
+						execution.setVariable('awwf_lanjut', true);
+					}
+					else
+					{
+						execution.setVariable('awwf_lanjut', false);
+					}
+					execution.setVariable('awwf_requestorTeknikalOutcomeText', task.getVariable('awwf_requestorTeknikalOutcome'));
+					execution.setVariable('awwf_requestorNonTeknikalOutcomeText', task.getVariable('awwf_requestorNonTeknikalOutcome'));
+				]]>
+			</activiti:string>
+          </activiti:field>
+        </activiti:taskListener>
+      </extensionElements>
+    </userTask>
+    <userTask id="laporWawancara2" name="Lapor Wawancara 2" activiti:assignee="Kepala HRD" activiti:formKey="awwf:activitiLaporWawancara2">
+      <extensionElements>
+      	<activiti:taskListener event="create" class="org.alfresco.repo.workflow.activiti.tasklistener.ScriptTaskListener">
+          <activiti:field name="script">
+            <activiti:string>
+            	<![CDATA[
+            		execution.setVariable('awwf_lanjut', false);
+            		task.setVariable('awwf_requestorTeknikalOutcome', task.getVariable('awwf_requestorTeknikalOutcomeText'));
+            		task.setVariable('awwf_requestorNonTeknikalOutcome', task.getVariable('awwf_requestorNonTeknikalOutcomeText'));
+				]]>
+			</activiti:string>
+          </activiti:field>
+        </activiti:taskListener>
+        <activiti:taskListener event="complete" class="org.alfresco.repo.workflow.activiti.tasklistener.ScriptTaskListener">
+          <activiti:field name="script">
+            <activiti:string>
+            	<![CDATA[
+            		if (task.getVariableLocal('awwf_LaporWawancara2Outcome') == 'Diterima')
+					{
+						for (var j = 0; j&lt;bpm_package.children.length;  j++)
+						{
+							if (bpm_package.children[j].hasApect("cb:emailable"))
+							{
+								bpm_package.children[j].properties["cb:status"]= "Approve";
+								bpm_package.children[j].save();
+							}
+						}
+					}
+				]]>
+			</activiti:string>
+          </activiti:field>
+        </activiti:taskListener>
+      </extensionElements>
+    </userTask>
+    <exclusiveGateway id="exclusivegateway1" name="Exclusive Gateway"></exclusiveGateway>
+    <exclusiveGateway id="exclusivegateway2" name="Exclusive Gateway"></exclusiveGateway>
+    <sequenceFlow id="flow1" sourceRef="startevent1" targetRef="submit"></sequenceFlow>
+    <sequenceFlow id="flow2" sourceRef="arrange" targetRef="exclusivegateway1"></sequenceFlow>
+    <sequenceFlow id="flow4" sourceRef="exclusivegateway1" targetRef="laporWawancara">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${awwf_lanjut == true}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow5" sourceRef="laporWawancara" targetRef="exclusivegateway2"></sequenceFlow>
+    <sequenceFlow id="flow7" sourceRef="exclusivegateway2" targetRef="laporWawancara2">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${awwf_lanjut == true}]]></conditionExpression>
+    </sequenceFlow>
+    <endEvent id="endevent1" name="End"></endEvent>
+    <sequenceFlow id="flow8" sourceRef="laporWawancara2" targetRef="endevent1"></sequenceFlow>
+    <sequenceFlow id="flow9" sourceRef="exclusivegateway1" targetRef="endevent1">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${awwf_lanjut == false}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow10" sourceRef="exclusivegateway2" targetRef="endevent1">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${awwf_lanjut == false}]]></conditionExpression>
+    </sequenceFlow>
+    <serviceTask id="submit" name="Submit" activiti:class="org.alfresco.repo.workflow.activiti.script.AlfrescoScriptDelegate">
+      <extensionElements>
+        <activiti:field name="script">
+          <activiti:string><![CDATA[execution.setVariable('awwf_lanjut', false);]]></activiti:string>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <sequenceFlow id="flow11" sourceRef="submit" targetRef="arrange"></sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_arrangeWawancara">
+    <bpmndi:BPMNPlane bpmnElement="arrangeWawancara" id="BPMNPlane_arrangeWawancara">
+      <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="20.0" y="180.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="arrange" id="BPMNShape_arrange">
+        <omgdc:Bounds height="55.0" width="105.0" x="121.0" y="170.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="laporWawancara" id="BPMNShape_laporWawancara">
+        <omgdc:Bounds height="55.0" width="105.0" x="330.0" y="170.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="laporWawancara2" id="BPMNShape_laporWawancara2">
+        <omgdc:Bounds height="55.0" width="105.0" x="540.0" y="170.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="exclusivegateway1" id="BPMNShape_exclusivegateway1">
+        <omgdc:Bounds height="40.0" width="40.0" x="260.0" y="177.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="exclusivegateway2" id="BPMNShape_exclusivegateway2">
+        <omgdc:Bounds height="40.0" width="40.0" x="470.0" y="177.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent1" id="BPMNShape_endevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="700.0" y="180.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="submit" id="BPMNShape_submit">
+        <omgdc:Bounds height="55.0" width="105.0" x="90.0" y="60.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="flow1" id="BPMNEdge_flow1">
+        <omgdi:waypoint x="37.0" y="180.0"></omgdi:waypoint>
+        <omgdi:waypoint x="37.0" y="88.0"></omgdi:waypoint>
+        <omgdi:waypoint x="90.0" y="87.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow2" id="BPMNEdge_flow2">
+        <omgdi:waypoint x="226.0" y="197.0"></omgdi:waypoint>
+        <omgdi:waypoint x="260.0" y="197.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow4" id="BPMNEdge_flow4">
+        <omgdi:waypoint x="300.0" y="197.0"></omgdi:waypoint>
+        <omgdi:waypoint x="330.0" y="197.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow5" id="BPMNEdge_flow5">
+        <omgdi:waypoint x="435.0" y="197.0"></omgdi:waypoint>
+        <omgdi:waypoint x="470.0" y="197.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow7" id="BPMNEdge_flow7">
+        <omgdi:waypoint x="510.0" y="197.0"></omgdi:waypoint>
+        <omgdi:waypoint x="540.0" y="197.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow8" id="BPMNEdge_flow8">
+        <omgdi:waypoint x="645.0" y="197.0"></omgdi:waypoint>
+        <omgdi:waypoint x="700.0" y="197.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow9" id="BPMNEdge_flow9">
+        <omgdi:waypoint x="280.0" y="217.0"></omgdi:waypoint>
+        <omgdi:waypoint x="280.0" y="308.0"></omgdi:waypoint>
+        <omgdi:waypoint x="717.0" y="308.0"></omgdi:waypoint>
+        <omgdi:waypoint x="717.0" y="215.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow10" id="BPMNEdge_flow10">
+        <omgdi:waypoint x="490.0" y="177.0"></omgdi:waypoint>
+        <omgdi:waypoint x="490.0" y="89.0"></omgdi:waypoint>
+        <omgdi:waypoint x="717.0" y="89.0"></omgdi:waypoint>
+        <omgdi:waypoint x="717.0" y="180.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow11" id="BPMNEdge_flow11">
+        <omgdi:waypoint x="142.0" y="115.0"></omgdi:waypoint>
+        <omgdi:waypoint x="173.0" y="170.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

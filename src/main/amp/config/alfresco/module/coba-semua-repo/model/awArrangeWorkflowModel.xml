@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Definition of new Model -->
+<model name="awwf:workflowmodel" xmlns="http://www.alfresco.org/model/dictionary/1.0">
+	<!-- Optional meta-data about the model -->
+	<description>Arrange Workflow Model</description>
+	
+	<!-- Imports are required to allow references to definitions in other models -->
+    <imports>
+        <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d" />
+        <import uri="http://www.alfresco.org/model/bpm/1.0" prefix="bpm" />
+    </imports>
+    
+    <!-- Introduction of new namespaces defined by this model -->
+    <namespaces>
+        <namespace uri="http://www.elcellent.com/model/workflow/1.0" prefix="awwf" />
+    </namespaces>
+    
+    <types>
+        <type name="awwf:submitRequest">
+		    <parent>bpm:startTask</parent>
+		    <mandatory-aspects>
+		    	<aspect>awwf:arrangeAble</aspect>
+		    </mandatory-aspects>
+		</type>
+		
+		<type name="awwf:activitiWawancaraTask">
+		    <parent>bpm:activitiOutcomeTask</parent>
+		    <properties>
+		        <property name="awwf:lanjutTidakLanjutOutcome">
+		            <type>d:text</type>
+		            <default>Tidak Lanjut</default>
+		            <constraints>
+		                <constraint type="LIST">
+		                    <parameter name="allowedValues">
+		                        <list>
+		                            <value>Lanjut</value>
+		                            <value>Tidak Lanjut</value>
+		                        </list>
+		                    </parameter>
+		                </constraint>
+		            </constraints>
+		        </property>
+		    </properties>
+		    <overrides>
+		        <property name="bpm:packageItemActionGroup">
+		            <default>read_package_item_actions</default>
+		        </property>
+		        <property name="bpm:outcomePropertyName">
+		            <default>{http://www.elcellent.com/model/workflow/1.0}lanjutTidakLanjutOutcome</default>
+		        </property>
+		    </overrides>
+		</type>
+		
+		<type name="awwf:activitiLaporWawancara2">
+		    <parent>bpm:activitiOutcomeTask</parent>
+		    <properties>
+		        <property name="awwf:laporWawancara2Outcome">
+		            <type>d:text</type>
+		            <default>Tidak Diterima</default>
+		            <constraints>
+		                <constraint type="LIST">
+		                    <parameter name="allowedValues">
+		                        <list>
+		                            <value>Diterima</value>
+		                            <value>Tidak Diterima</value>
+		                        </list>
+		                    </parameter>
+		                </constraint>
+		            </constraints>
+		        </property>	
+		        <property name="awwf:komentarLaporanWawancara2">
+		        	<title>Komentar Laporan Wawancara 2</title>
+		        	<type>d:text</type>
+		        </property>
+		    </properties>
+		    <overrides>
+		        <property name="bpm:packageItemActionGroup">
+		            <default>read_package_item_actions</default>
+		        </property>
+		        <property name="bpm:outcomePropertyName">
+		            <default>{http://www.elcellent.com/model/workflow/1.0}laporWawancara2Outcome</default>
+		        </property>
+		    </overrides>
+		</type>
+		
+		<type name="awwf:activitiArrangeWawancara">
+		    <parent>awwf:activitiWawancaraTask</parent>
+		    <properties>
+		    </properties>
+		</type>
+		
+		<type name="awwf:activitiLaporWawancara">
+		    <parent>awwf:activitiWawancaraTask</parent>
+		    <properties>
+		    	<property name="awwf:requestorTeknikalOutcome">
+		    		<type>d:text</type>
+		            <default>Buruk</default>
+		            <constraints>
+		                <constraint type="LIST">
+		                    <parameter name="allowedValues">
+		                        <list>
+		                            <value>Sangat Bagus</value>
+		                            <value>Bagus</value>
+		                            <value>Kurang Bagus</value>
+		                            <value>Buruk</value>
+		                        </list>
+		                    </parameter>
+		                </constraint>
+		            </constraints>
+		    	</property>
+		    	<property name="awwf:requestorNonTeknikalOutcome">
+		    		<type>d:text</type>
+		            <default>Buruk</default>
+		            <constraints>
+		                <constraint type="LIST">
+		                    <parameter name="allowedValues">
+		                        <list>
+		                            <value>Sangat Bagus</value>
+		                            <value>Bagus</value>
+		                            <value>Kurang Bagus</value>
+		                            <value>Buruk</value>
+		                        </list>
+		                    </parameter>
+		                </constraint>
+		            </constraints>
+		    	</property>
+		    	<property name="awwf:catatanArrangeWawancara">
+		    		<title>Catatan Laporan Wawancara</title>
+		    		<type>d:text</type>
+		    	</property>    
+		    </properties>
+		</type>
+    </types>
+    
+    <aspects>
+    	<aspect name="awwf:arrangeAble">
+    		<title>Tanggal Waktu Wawancara</title>
+    		<properties>
+    			<property name="awwf:tanggalWaktuWawancara">
+    				<title>Tanggal Waktu Wawancara</title>
+    				<type>d:datetime</type>
+    				<mandatory>true</mandatory>
+    				<multiple>false</multiple>
+    			</property>
+    		</properties>
+    	</aspect>
+    </aspects>
+</model>

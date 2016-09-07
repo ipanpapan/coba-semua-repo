@@ -3,6 +3,7 @@
 	<name>coba-semua-repo</name>
 	<comment></comment>
 	<projects>
+		<project>behaviour-coba-repo</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
